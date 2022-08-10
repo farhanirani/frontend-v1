@@ -55,19 +55,19 @@ export default function Login() {
         role: "normal",
         password: password,
       };
-      console.log(loginUser);
-      const loginRes = await axios.post(
-        "https://db-grads-93u0-group-10.nw.r.appspot.com/api/v1/login",
-        loginUser
-      );
-      console.log(loginRes);
-      if (loginRes) {
-        localStorage.setItem("auth-token", "true");
-        navigate("/");
-      } else {
-        console.log("wrong credentials");
-        alert("Incorrect Credentials");
-      }
+      // console.log(loginUser);
+      // const loginRes = await axios.post(
+      //   "https://db-grads-93u0-group-10.nw.r.appspot.com/api/v1/login",
+      //   loginUser
+      // );
+      // console.log(loginRes);
+      // if (loginRes === "success") {
+      localStorage.setItem("auth-token", parseInt(userName));
+      navigate("/");
+      // } else {
+      //   console.log("wrong credentials");
+      //   alert("Incorrect Credentials");
+      // }
     } catch (err) {
       console.log(err.response.data.msg);
       alert(err.response.data.msg);

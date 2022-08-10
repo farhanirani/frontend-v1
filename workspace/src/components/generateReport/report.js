@@ -109,11 +109,12 @@ export const Report = () => {
     e.preventDefault();
     localStorage.setItem("start_date", start_date);
     localStorage.setItem("end_date", end_date);
-    // https://db-grads-93u0-group-10.nw.r.appspot.com/api/v1/security/date?from=2002-12-25&to=2006-12-25
+    //
+    // https://db-grads-93u0-group-10.nw.r.appspot.com/api/v1/security/all/date?from=2002-12-25&to=2006-12-25
     var starting_address = "https://db-grads-93u0-group-10.nw.r.appspot.com";
     var url =
       starting_address +
-      "/api/v1/security/date?from=" +
+      "/api/v1/security/1/date?from=" +
       localStorage.getItem("start_date") +
       "&to=" +
       localStorage.getItem("end_date");

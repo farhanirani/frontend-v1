@@ -5,13 +5,14 @@ import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import "./TradeTable.css";
 
 export const TradeTable = () => {
+  let token = localStorage.getItem("auth-token");
+
   const changeRowColor = (params) => {
     var cur_date = new Date();
     const date = new Date(params.data.maturity_date);
     if (date < cur_date) {
       return { "background-color": "#FAA0A0" };
-    }
-    else{
+    } else {
       return { "background-color": "#EEEEEE" };
     }
   };
@@ -81,14 +82,24 @@ export const TradeTable = () => {
   ];
 
   const onGridReady = (params) => {
-    var starting_address = "https://db-grads-93u0-group-10.nw.r.appspot.com"
-    fetch(starting_address+"/api/v1/security/")
+    var starting_address = "https://db-grads-93u0-group-10.nw.r.appspot.com";
+    // if (token) {
+    //   fetch(starting_address + "/api/v1/security/" + token)
+    //     // fetch("http://localhost:8000/trade-sec-api")
+    //     .then((resp) => resp.json())
+    //     .then((resp) => {
+    //       console.log(resp);
+    //       params.api.applyTransaction({ add: resp });
+    //     });
+    // } else {
+    fetch(starting_address + "/api/v1/security/all")
       // fetch("http://localhost:8000/trade-sec-api")
       .then((resp) => resp.json())
       .then((resp) => {
         console.log(resp);
         params.api.applyTransaction({ add: resp });
       });
+    // }
   };
 
   const headingStyle = {
