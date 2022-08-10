@@ -1,0 +1,35 @@
+.startdate{
+  padding: 15px;
+  transform: translate(40%, 18%);
+}
+
+.submit-btn{
+  padding: 10px;
+  transform: translate(47%, 18%);
+}
+
+.export-btn{
+  font-size: 16px;
+  background-color: #5069f6;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-color: #5069f6;
+  margin-top: 28px;
+  transform: translate(525%, 15%);
+  font-size: "PT Sans";
+}
+
+.submit-btn-color{
+  background-color: #5069f6;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  padding: 0px 10px;
+  border-color: #5069f6;
+}
+
+.table-container{
+  padding-left: 70px;
+}

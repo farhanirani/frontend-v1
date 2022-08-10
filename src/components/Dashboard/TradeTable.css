@@ -1,0 +1,32 @@
+.heading {
+  font-family: "PT Sans", sans-serif;
+}
+
+.ag-theme-alpine {
+  --ag-header-height: 30px;
+  /* --ag-header-foreground-color: black;
+  --ag-header-background-color: white; */
+  --ag-header-foreground-color: white;
+  --ag-header-background-color: #576F72;
+  --ag-header-cell-hover-background-color: rgb(80, 40, 140);
+  --ag-header-cell-moving-background-color: rgb(80, 40, 140);
+}
+.ag-theme-alpine .ag-header {
+  font-family: "PT Sans";
+}
+.ag-theme-alpine .ag-header-group-cell {
+  font-weight: normal;
+  font-size: 22px;
+}
+.ag-theme-alpine .ag-header-cell {
+  font-size: 18px;
+}
+
+.table-container{
+  padding-left: 70px;
+}
+
+.ag-root-wrapper {
+  border: solid 1px;
+  border-color: var(--ag-border-color, #babfc7) !important;
+}

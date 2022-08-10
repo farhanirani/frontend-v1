@@ -1,0 +1,28 @@
+.logo{
+  padding-top: 10px;
+  font-size:30px;
+  display:flex;
+  justify-content:flex-start;
+  font-weight: 400;
+  font-family: 'PT Sans';
+}
+
+.bb{
+  padding-top: 7px;
+  color: #0018A8;
+}
+
+.navbar-main{
+  background-color: white;
+  box-shadow: 5px 2px rgb(196, 193, 193);
+}
+
+.tab{
+  font-size:22px;
+  font-weight: 400;
+}
+
+.nav-link:focus{
+  color: red;
+  font-weight: 500;
+}
